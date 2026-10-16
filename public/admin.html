@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillUp Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="loginPanel">
+      <h2>Admin Login</h2>
+      <input id="adminPass" type="password" placeholder="Admin password">
+      <button id="loginBtn">Login</button>
+      <p id="loginMsg"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <h2>Registrations</h2>
+
+      <div class="controls">
+        <input id="searchBox" placeholder="Search name, phone, course">
+        <select id="courseFilter"><option value="">All Skills</option></select>
+        <select id="paidFilter">
+          <option value="">All Payment Status</option>
+          <option value="paid">Paid</option>
+          <option value="unpaid">Unpaid</option>
+        </select>
+        <button id="exportBtn">Export CSV</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>#</th><th>Name</th><th>Phone</th><th>Skill</th><th>Date</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="regBody"></tbody>
+      </table>
+
+      <p id="emptyMsg" class="hidden">No registrations found.</p>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

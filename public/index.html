@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillUp NAIJA — Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>SkillUp NAIJA — Participant Registration</h1>
+
+    <form id="enrollForm">
+      <fieldset>
+        <label>Surname <input name="surname" required></label>
+        <label>First Name <input name="firstName" required></label>
+        <label>Middle Name <input name="middleName"></label>
+        <label>Contact Address <input name="address" required></label>
+        <label>State of Origin <input name="stateOfOrigin" required></label>
+        <label>Nationality <input name="nationality" required></label>
+        <label>Religion <input name="religion"></label>
+        <label>Sex
+          <select name="sex" required>
+            <option value="">Select</option><option>Male</option><option>Female</option>
+          </select>
+        </label>
+        <label>Phone <input name="phone" required></label>
+        <label>Email <input name="email" type="email"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Officer's Consent (if applicable)</legend>
+        <label>Officer Name <input name="officerName"></label>
+        <label>Officer Phone <input name="officerPhone"></label>
+      </fieldset>
+
+      <fieldset>
+        <label>Choose Skill
+          <select id="courseSelect" name="course" required>
+            <option value="">Loading skills…</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <label class="consent">
+        <input type="checkbox" name="consent" required> I consent to my data being processed per NDPA 2023.
+      </label>
+
+      <button type="submit">Submit Registration</button>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
